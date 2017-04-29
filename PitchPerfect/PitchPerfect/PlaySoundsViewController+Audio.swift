@@ -143,6 +143,8 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
     // MARK: UI Functions
 
     func configureUI(_ playState: PlayingState) {
+      scaleUI();
+      
         switch(playState) {
         case .playing:
             setPlayButtonsEnabled(false)
@@ -152,7 +154,18 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
             stopButton.isEnabled = false
         }
     }
+  
+  func scaleUI() {
+    snailButton.imageView?.contentMode = .scaleAspectFit
+    chipmunkButton.imageView?.contentMode = .scaleAspectFit
+    rabbitButton.imageView?.contentMode = .scaleAspectFit
+    vaderButton.imageView?.contentMode = .scaleAspectFit
+    echoButton.imageView?.contentMode = .scaleAspectFit
+    reverbButton.imageView?.contentMode = .scaleAspectFit
     
+    stopButton.imageView?.contentMode = .scaleAspectFit
+  }
+  
     func setPlayButtonsEnabled(_ enabled: Bool) {
         snailButton.isEnabled = enabled
         chipmunkButton.isEnabled = enabled
@@ -160,11 +173,5 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         vaderButton.isEnabled = enabled
         echoButton.isEnabled = enabled
         reverbButton.isEnabled = enabled
-    }
-
-    func showAlert(_ title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: Alerts.DismissAlert, style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
     }
 }

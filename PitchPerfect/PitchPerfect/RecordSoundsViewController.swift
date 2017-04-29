@@ -12,14 +12,14 @@ import AVFoundation
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
   
   struct Infos {
-    static let StopRecordSegueIdentifier   = "stopRecordSegue"
+    static let StopRecordSegueIdentifier = "stopRecordSegue"
     
-    static let RecordFailureInfo           = "record unsuccessfully"
-    static let RecordingInfo               = "Recording in Progress"
-    static let ToRecordInfo                = "Tap to Record"
+    static let RecordFailureInfo = "record unsuccessfully"
+    static let RecordingInfo = "Recording in Progress"
+    static let ToRecordInfo = "Tap to Record"
     
-    static let RecordName                  = "audioVoice.wav"
-    static let Separator                   = "/"
+    static let RecordName = "audioVoice.wav"
+    static let Separator = "/"
   }
 
   @IBOutlet weak var recordButton: UIButton!
@@ -63,7 +63,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     if flag {
       performSegue(withIdentifier: Infos.StopRecordSegueIdentifier, sender: recorder.url)
     } else {
-      print(Infos.RecordFailureInfo)
+      showAlert(Infos.RecordFailureInfo)
     }
   }
   
@@ -80,17 +80,20 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
   
   func configureUI(_ isRecording: Bool) {
     recordButton.isEnabled = !isRecording
-    stopButton.isEnabled   =  isRecording
-    recordInfoLabel.text   =  isRecording ? Infos.RecordingInfo : Infos.ToRecordInfo
+    stopButton.isEnabled =  isRecording
+    recordInfoLabel.text =  isRecording ? Infos.RecordingInfo : Infos.ToRecordInfo
+    
+    recordButton.imageView?.contentMode = .scaleAspectFit
+    stopButton.imageView?.contentMode = .scaleAspectFit
   }
   
   // MARK: - Helper Method
   
   func audioFilePath() -> URL {
     let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
-    let recordName   = Infos.RecordName
-    let paths        = [documentPath, recordName]
-    let fullPath     = URL(string: paths.joined(separator: Infos.Separator))
+    let recordName = Infos.RecordName
+    let paths = [documentPath, recordName]
+    let fullPath = URL(string: paths.joined(separator: Infos.Separator))
     
     return fullPath!
   }

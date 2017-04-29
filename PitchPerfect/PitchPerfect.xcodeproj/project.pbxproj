@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A6600CE1EB2E6C1007A2880 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6600CD1EB2E6C1007A2880 /* UIViewController+Alert.swift */; };
 		8AA3C2181E6D3C200099B269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3C2171E6D3C200099B269 /* AppDelegate.swift */; };
 		8AA3C21D1E6D3C200099B269 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AA3C21B1E6D3C200099B269 /* Main.storyboard */; };
 		8AA3C21F1E6D3C200099B269 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AA3C21E1E6D3C200099B269 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A6600CD1EB2E6C1007A2880 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		8AA3C2141E6D3C200099B269 /* PitchPerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchPerfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA3C2171E6D3C200099B269 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AA3C21C1E6D3C200099B269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				8AA3C2231E6D3C200099B269 /* Info.plist */,
 				8AA3C22B1E6D699C0099B269 /* PlaySoundsViewController.swift */,
 				8AA3C22D1E6D6AD60099B269 /* RecordSoundsViewController.swift */,
+				8A6600CD1EB2E6C1007A2880 /* UIViewController+Alert.swift */,
 			);
 			path = PitchPerfect;
 			sourceTree = "<group>";
@@ -97,7 +100,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = hbzs;
 				TargetAttributes = {
 					8AA3C2131E6D3C1F0099B269 = {
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A6600CE1EB2E6C1007A2880 /* UIViewController+Alert.swift in Sources */,
 				8AA3C22E1E6D6AD60099B269 /* RecordSoundsViewController.swift in Sources */,
 				8AA3C22C1E6D699C0099B269 /* PlaySoundsViewController.swift in Sources */,
 				8AA3C2181E6D3C200099B269 /* AppDelegate.swift in Sources */,
@@ -190,6 +194,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -240,6 +245,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -310,6 +316,7 @@
 				8AA3C2281E6D3C200099B269 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
